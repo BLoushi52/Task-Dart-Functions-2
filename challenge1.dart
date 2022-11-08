@@ -4,6 +4,17 @@
  * - that prints your name on the screen.
  */
 
+void main() {
+  printName();
+  printAge(1995);
+  printHello("Khaled", "tr");
+  printMax(30, 100);
+}
+
+void printName() {
+  print("Khaled");
+}
+
 /**
  * Task 2:
  * Create a function called `printAge`
@@ -11,6 +22,12 @@
  * - and prints the age on the screen.
  * - Age = current year - birth
  */
+
+void printAge(int birth) {
+  int currentYear = 2022;
+  int age = currentYear - birth;
+  print(age);
+}
 
 /**
  * Task 3:
@@ -23,9 +40,29 @@
  * -- tr: it should print `Merhaba NAME`
  */
 
+void printHello(String name, String language) {
+  if (language == "en") {
+    print("Hello ${name.toUpperCase()}");
+  } else if (language == "es") {
+    print("Hola ${name.toUpperCase()}");
+  } else if (language == "fr") {
+    print("Bonjour ${name.toUpperCase()}");
+  } else if (language == "tr") {
+    print("Merhaba ${name.toUpperCase()}");
+  }
+}
+
 /**
  * Task 4:
  * Create a function called `printMax`
  * - that takes two numbers as parameters,
  * - and prints out the bigger number
  */
+
+void printMax(int num1, int num2) {
+  if (num1 > num2) {
+    print(num1);
+  } else {
+    print(num2);
+  }
+}
